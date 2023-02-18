@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device;
+package org.lineageos.settings.device;
 
 import android.content.Context;
 import android.hardware.input.InputManager;
@@ -33,9 +33,9 @@ import android.view.WindowManagerGlobal;
 
 import com.android.internal.os.DeviceKeyHandler;
 
-import mokee.providers.MKSettings;
+import lineageos.providers.LineageSettings;
 
-import org.mokee.internal.util.FileUtils;
+import org.lineageos.internal.util.FileUtils;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -174,7 +174,7 @@ public class KeyHandler implements DeviceKeyHandler {
                 : WindowManager.TAKE_SCREENSHOT_FULLSCREEN;
 
         try {
-            WindowManagerGlobal.getWindowManagerService().mokeeTakeScreenshot(type);
+            WindowManagerGlobal.getWindowManagerService().lineageTakeScreenshot(type);
         } catch (RemoteException e) {
             Log.e(TAG, "Error while trying to takeScreenshot.", e);
         }

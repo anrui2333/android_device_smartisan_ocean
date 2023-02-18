@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device;
+package org.lineageos.settings.device;
 
 import java.util.HashMap;
 import java.util.Map;
 
 class Constants {
 
-    static final String ACTION_INITIALIZE_MK_HARDWARE =
-            mokee.content.Intent.ACTION_INITIALIZE_MK_HARDWARE;
+    static final String ACTION_INITIALIZE_LINEAGE_HARDWARE =
+            lineageos.content.Intent.ACTION_INITIALIZE_LINEAGE_HARDWARE;
 
     // Holds <preference_key> -> <proc_node> mapping
     static final Map<String, String> sBooleanNodePreferenceMap = new HashMap<>();

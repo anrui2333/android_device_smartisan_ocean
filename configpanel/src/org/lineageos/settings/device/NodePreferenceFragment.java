@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device;
+package org.lineageos.settings.device;
 
 import android.os.Bundle;
 import android.support.v14.preference.PreferenceFragment;
@@ -24,7 +24,7 @@ import android.support.v7.preference.Preference;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
-import org.mokee.internal.util.FileUtils;
+import org.lineageos.internal.util.FileUtils;
 
 public abstract class NodePreferenceFragment extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {

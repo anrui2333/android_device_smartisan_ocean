@@ -14,14 +14,22 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device;
+package org.lineageos.settings.device;
 
-import org.mokee.internal.util.FileUtils;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
 
-class FlickerFreeUtils {
+public class Startup extends BroadcastReceiver {
 
-    static boolean isSupported() {
-        return FileUtils.fileExists(FlickerFreeConstants.FLICKER_FREE_NODE);
+    @Override
+    public void onReceive(final Context context, final Intent intent) {
+        final String action = intent.getAction();
+        if (Constants.ACTION_INITIALIZE_LINEAGE_HARDWARE.equals(action)) {
+            ButtonSettingsActivity.restoreState(context);
+            FlickerFreeSettingsActivity.restoreState(context);
+            Utils.restoreNodePrefs(context);
+        }
     }
 
 }

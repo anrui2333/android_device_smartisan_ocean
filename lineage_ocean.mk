@@ -22,20 +22,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit from ocean device
 $(call inherit-product, device/smartisan/ocean/device.mk)
 
-# Inherit some common MoKee stuff.
-$(call inherit-product, vendor/mokee/config/common_full_phone.mk)
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.mk.maintainer=XiNGRZ
 
-PRODUCT_NAME := mokee_ocean
+# Device identifier. This must come after all inclusions.
+PRODUCT_NAME := lineage_ocean
 PRODUCT_BRAND := SMARTISAN
 PRODUCT_DEVICE := ocean
 PRODUCT_MANUFACTURER := smartisan
 PRODUCT_MODEL := OE106
 
+# Device prop
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="ocean" \
     PRIVATE_BUILD_DESC="ocean-user 8.1.0 OPM1.171019.026 1 dev-keys"
 
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := SMARTISAN/oxford/oxford:8.1.0/OPM1.171019.026/1574326817:user/dev-keys

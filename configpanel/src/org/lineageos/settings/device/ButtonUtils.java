@@ -14,18 +14,14 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device;
+package org.lineageos.settings.device;
 
-import android.os.Bundle;
-import android.util.Log;
+import org.lineageos.internal.util.FileUtils;
 
-public class FlickerFreeSettingsFragment extends NodePreferenceFragment {
+class ButtonUtils {
 
-    private static final String TAG = "FlickerFreeSettingsFragment";
-
-    @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.flicker_free_settings);
+    static boolean isHardwareKeysSupported() {
+        return FileUtils.fileExists(ButtonConstants.BUTTON_SWAP_NODE);
     }
 
 }

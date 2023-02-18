@@ -56,8 +56,8 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/smartisan/sdm710
-TARGET_KERNEL_CONFIG := mokee_ocean_defconfig
+TARGET_KERNEL_SOURCE := kernel/smartisan/ocean
+TARGET_KERNEL_CONFIG := lineage_ocean_defconfig
 
 NEED_KERNEL_MODULE_SYSTEM := true
 
@@ -83,7 +83,7 @@ TARGET_LD_SHIM_LIBS += /vendor/lib/libmms_warper_vstab.so|/vendor/lib/libshim_ca
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-WITH_MOKEE_CHARGER := false
+WITH_LINEAGE_CHARGER := false
 
 # Display
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true

@@ -14,22 +14,18 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device;
+package org.lineageos.settings.device;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 
-public class Startup extends BroadcastReceiver {
+public class FlickerFreeSettingsFragment extends NodePreferenceFragment {
+
+    private static final String TAG = "FlickerFreeSettingsFragment";
 
     @Override
-    public void onReceive(final Context context, final Intent intent) {
-        final String action = intent.getAction();
-        if (Constants.ACTION_INITIALIZE_MK_HARDWARE.equals(action)) {
-            ButtonSettingsActivity.restoreState(context);
-            FlickerFreeSettingsActivity.restoreState(context);
-            Utils.restoreNodePrefs(context);
-        }
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        addPreferencesFromResource(R.xml.flicker_free_settings);
     }
 
 }

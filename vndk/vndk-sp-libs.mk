@@ -45,9 +45,9 @@ EXTRA_VENDOR_LIBRARIES := \
     com.qualcomm.qti.imscmservice@2.1 \
     vendor.display.config@1.0 \
     vendor.display.config@1.1 \
-    vendor.mokee.livedisplay@2.0 \
-    vendor.mokee.power@1.0 \
-    vendor.mokee.trust@1.0 \
+    vendor.lineage.livedisplay@2.0 \
+    vendor.lineage.power@1.0 \
+    vendor.lineage.trust@1.0 \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.data.dynamicdds@1.0 \
     vendor.qti.hardware.data.latency@1.0 \

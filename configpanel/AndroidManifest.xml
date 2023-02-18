@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.mokee.settings.device"
+    package="org.lineageos.settings.device"
     android:sharedUserId="android.uid.system">
 
     <application
@@ -29,7 +29,7 @@
             android:name=".ButtonSettingsActivity"
             android:label="@string/button_panel_title">
             <intent-filter>
-                <action android:name="org.mokee.settings.device.ADDITIONAL_BUTTONS_SETTINGS" />
+                <action android:name="org.lineageos.settings.device.ADDITIONAL_BUTTONS_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -50,7 +50,7 @@
 
         <receiver android:name=".Startup" >
             <intent-filter>
-                <action android:name="mokee.intent.action.INITIALIZE_MK_HARDWARE" />
+                <action android:name="lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
             </intent-filter>
         </receiver>
 

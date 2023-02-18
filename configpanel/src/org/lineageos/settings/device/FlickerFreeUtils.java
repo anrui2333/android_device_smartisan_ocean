@@ -14,15 +14,14 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device;
+package org.lineageos.settings.device;
 
-public class FlickerFreeConstants {
+import org.lineageos.internal.util.FileUtils;
 
-    // Preference keys
-    static final String FLICKER_FREE_KEY = "flicker_free";
+class FlickerFreeUtils {
 
-    // Flicker-free nodes
-    static final String FLICKER_FREE_NODE =
-            "/sys/devices/platform/soc/soc:qcom,dsi-display@0/msm_fb_ea_enable";
+    static boolean isSupported() {
+        return FileUtils.fileExists(FlickerFreeConstants.FLICKER_FREE_NODE);
+    }
 
 }

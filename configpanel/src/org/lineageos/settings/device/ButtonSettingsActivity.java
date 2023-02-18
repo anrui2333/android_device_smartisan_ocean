@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device;
+package org.lineageos.settings.device;
 
 import android.app.ActionBar;
 import android.content.Context;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
-public class FlickerFreeSettingsActivity extends PreferenceActivity {
+public class ButtonSettingsActivity extends PreferenceActivity {
 
     static boolean isSupported() {
-        return FlickerFreeUtils.isSupported();
+        return ButtonUtils.isHardwareKeysSupported();
     }
 
     static void restoreState(Context context) {
         if (isSupported()) {
-            Utils.enableComponent(context, FlickerFreeSettingsActivity.class);
+            Utils.enableComponent(context, ButtonSettingsActivity.class);
         } else {
-            Utils.disableComponent(context, FlickerFreeSettingsActivity.class);
+            Utils.disableComponent(context, ButtonSettingsActivity.class);
         }
     }
 
@@ -44,7 +44,7 @@ public class FlickerFreeSettingsActivity extends PreferenceActivity {
             actionBar.setHomeButtonEnabled(true);
         }
         getFragmentManager().beginTransaction().replace(android.R.id.content,
-                new FlickerFreeSettingsFragment()).commit();
+                new ButtonSettingsFragment()).commit();
     }
 
 }
