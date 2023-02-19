@@ -54,8 +54,6 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".KeyHandler" />
-
     </application>
 
 </manifest>
