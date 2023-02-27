@@ -257,6 +257,14 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
+# Recovery
+PRODUCT_PACKAGES += \
+    dm-tool \
+    init.recovery.qcom.rc \
+    init.recovery.usb.rc \
+    logic_volume \
+    logic_volume.conf
+
 # RCS
 PRODUCT_PACKAGES += \
     rcs_service_aidl \
