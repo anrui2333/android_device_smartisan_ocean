@@ -58,7 +58,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/smartisan/ocean
 TARGET_KERNEL_CONFIG := lineage_ocean_defconfig
-TARGET_KERNEL_CLANG_COMPILE := true
+
 NEED_KERNEL_MODULE_SYSTEM := true
 
 # HAX: SELinux Permissive - Remove ASAP
