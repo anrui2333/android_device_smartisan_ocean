@@ -162,7 +162,6 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_PROVIDES_KEYMASTER := true
 
 # RIL
-TARGET_RIL_VARIANT := caf
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
